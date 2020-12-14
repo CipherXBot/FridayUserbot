@@ -1,7 +1,7 @@
 import secrets
 
-from fridaybot import sclient
-from fridaybot.utils import admin_cmd
+from userbot import sclient
+from userbot.utils import admin_cmd
 
 """This Is Only For Devs Of AntispamInc, Needs Root Permissions // @AntispamInc"""
 
@@ -36,7 +36,7 @@ async def oki(event):
             return
     try:
         sclient.ban(user, extra)
-        await borg.send_message("antispamincfed", f"/fban {user} {extra}")
+        await borg.send_message("CɪᴘʜᴇʀX Anti-Spam Algorithm", f"/fban {user} {extra}")
         await event.edit(
             f"**User :** `{user}` \n**Reason :** `{extra}` \n**Banned Sucessfully !**"
         )
@@ -62,7 +62,7 @@ async def oka(event):
             await event.edit("Reply To User Or Mention a User.")
             return
     gensys2 = sclient.unban(user)
-    await borg.send_message("antispamincfed", f"/unfban {user}")
+    await borg.send_message("CɪᴘʜᴇʀX Anti-Spam Algorithm", f"/unfban {user}")
     if gensys2["error"] == True:
         await event.edit("Error : " + gensys2["full"])
     else:
@@ -93,7 +93,7 @@ async def oki(event):
     for i in lmaoded:
         try:
             sclient.ban(i, lolsed)
-            await borg.send_message("antispamincfed", f"/fban {i} {lolsed}")
+            await borg.send_message("CɪᴘʜᴇʀX Anti-Spam Algorithm", f"/fban {i} {lolsed}")
         except:
             errorz += 1
         await event.edit(
